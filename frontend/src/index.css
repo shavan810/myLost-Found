@@ -1,0 +1,50 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  * { @apply border-slate-200; }
+  body { @apply font-body bg-slate-50 text-slate-800 antialiased; }
+  h1,h2,h3,h4,h5,h6 { @apply font-display; }
+}
+
+@layer components {
+  .btn-primary {
+    @apply bg-primary-600 hover:bg-primary-700 text-white font-medium py-2.5 px-5 rounded-xl transition-all duration-200 shadow-sm hover:shadow-glow active:scale-95 disabled:opacity-60 disabled:cursor-not-allowed;
+  }
+  .btn-secondary {
+    @apply bg-white hover:bg-slate-50 text-slate-700 font-medium py-2.5 px-5 rounded-xl border border-slate-200 transition-all duration-200 shadow-sm active:scale-95;
+  }
+  .btn-danger {
+    @apply bg-danger-500 hover:bg-danger-600 text-white font-medium py-2.5 px-5 rounded-xl transition-all duration-200 shadow-sm active:scale-95;
+  }
+  .input-field {
+    @apply w-full px-4 py-3 rounded-xl border border-slate-200 bg-white focus:outline-none focus:ring-2 focus:ring-primary-500 focus:border-transparent transition-all duration-200 text-slate-800 placeholder-slate-400;
+  }
+  .card {
+    @apply bg-white rounded-2xl shadow-card border border-slate-100 overflow-hidden;
+  }
+  .badge-lost {
+    @apply bg-danger-50 text-danger-700 text-xs font-semibold px-2.5 py-1 rounded-full;
+  }
+  .badge-found {
+    @apply bg-success-50 text-success-700 text-xs font-semibold px-2.5 py-1 rounded-full;
+  }
+  .badge-resolved {
+    @apply bg-slate-100 text-slate-600 text-xs font-semibold px-2.5 py-1 rounded-full;
+  }
+}
+
+/* Scrollbar */
+::-webkit-scrollbar { width: 6px; }
+::-webkit-scrollbar-track { background: #f1f5f9; }
+::-webkit-scrollbar-thumb { background: #cbd5e1; border-radius: 3px; }
+::-webkit-scrollbar-thumb:hover { background: #94a3b8; }
+
+/* Gradient mesh bg */
+.mesh-bg {
+  background: radial-gradient(at 40% 20%, hsla(217,100%,96%,1) 0px, transparent 50%),
+              radial-gradient(at 80% 0%, hsla(263,100%,96%,1) 0px, transparent 50%),
+              radial-gradient(at 0% 50%, hsla(355,100%,97%,1) 0px, transparent 50%),
+              #f8fafc;
+}
